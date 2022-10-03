@@ -17,6 +17,10 @@ I used the Granger causality test for the pairwise interaction between stock pri
 
 ## References
 <a id="1">[1]</a> 
-Dijkstra, E. W. (1968). 
-Go to statement considered harmful. 
-Communications of the ACM, 11(3), 147-148.
+Granger, Clive WJ. (1969). 
+Investigating causal relations by econometric models and cross-spectral methods. 
+Econometrica: journal of the Econometric Society, 37, 424-438.
+
+
+
+
