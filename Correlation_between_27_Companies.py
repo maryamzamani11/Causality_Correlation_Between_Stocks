@@ -21,7 +21,7 @@ Companies = [AAPL, AMGN, AXP, BA, CAT, CSCO, CVX, DIS, GS, HD, HON, IBM, INTC, J
 
 Companies = []
 for company in tickers:
-    Companies.append(data.DataReader("AAPL", 'yahoo', start, end))
+    Companies.append(data.DataReader(company, 'yahoo', start, end))
 
 # Concatanate all the stocks into a single dataframe
 
