@@ -15,4 +15,6 @@ def Generate_gbm(n,X0,Mu,sigma):
 # X0: initial close price of stocks at time t=0 
 # Mu: mean of the log-return of stocks
 # sigma: std of the log-return
+
+# As an example:
 plt.plot(Generate_gbm(1000,66.81,0.00013,0.014))
