@@ -3,7 +3,7 @@ In this repository, I look for the interaction between stock prices of 27 big US
 
 # Granger causality test between stock prices of companies
 
-Granger causality (GC) is a statistical method, introduced for the first time in the field of econometrics [[1]](#1), to study the causal interaction between two or multiple time series. E.g. in the case of two time series, GC quantifies whether one series helps forecasting the other. The method is based on two main premises, namely
+Granger causality (GC) is a statistical method, introduced for the first time in the field of econometrics [[1,2]](#1, #2), to study the causal interaction between two or multiple time series. E.g. in the case of two time series, GC quantifies whether one series helps forecasting the other. The method is based on two main premises, namely
  (i) cause happens before its effect and (ii) observing the cause can improve the predictability of its effect. 
 Consider two time series, ${x_{t}}$ and ${y_{t}}$, recorded simulataneously. The series ${x_{t}}$ Granger causes ${y_{t}}$ if ${x_{t}}$ contains some information which can be used for improving the forecast accuracy of ${y_{t}}$, alongside the past values of ${y_{t}}$ itself. Granger causality is thus a measure of predictability, allowing the evaluation of the usefulness of one time-series in forecasting another. The linear Granger causality from series $x_t$ to $y_t$ could be formulated mathematically using vector auto-regressive model (VAR) as follows:
 $$y_t = \alpha_{0} + \sum_{l=1}^{l=\tau^{'}} \alpha_{l} y_{t-l} + \sum_{l=1}^{l=\tau} \beta_{l} x_{t-l} + \epsilon_t.$$
@@ -20,6 +20,13 @@ I used the Granger causality test for the pairwise interaction between stock pri
 Granger, Clive WJ. (1969). 
 Investigating causal relations by econometric models and cross-spectral methods. 
 Econometrica: journal of the Econometric Society, 37, 424-438.
+
+
+<b id="2">[2]</b> 
+Granger, Clive WJ. (1980). 
+Testing for causality: A personal viewpoint. 
+Journal of Economic Dynamics and control, 2, 329-352.
+
 
 
 
