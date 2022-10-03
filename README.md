@@ -11,9 +11,25 @@ where $\tau^{'}$ and $\tau$ are the maximum lag times, and $\epsilon_t$ is the r
 The maximum lags have to be chosen such that all past observations make a statistically significant contribution to the forecast.
 In the above bi-variate causal model ${x_{t}}$ Granger causes ${y_{t}}$ if the coefficients $\beta_{l}$ are different from zero and statistically significant. The latter can be tested using an F-test with the null hypothesis that all the $\beta_{l}$ coefficients are zero. 
 
-I applied this type of bivariate VAR model in a windowed framework, creating an asymmetric matrix of binary results: granger causal or not. Furthermore, note that Granger causality can only be applied for the stationary time series. Therefore, before applying it one has to make sure of stationary of the time series under study, in this case the log-return of the time series of prices. 
+I applied this type of bivariate VAR model in a windowed framework, creating an asymmetric matrix of binary results: granger causal or not. Furthermore, note that Granger causality can only be applied for the stationary time series. Therefore, before applying it, one has to make sure of stationary of the time series under study, in this case the log-return of the time series of prices. 
 
 I used the Granger causality test for the pairwise interaction between stock prices of companies in Dow Jones Industrial Average (DJIA). Some companies from these two indices are excluded, because of unavailability of data during the time period of study. So altogether I analysed 27 big companies in the USA. Data are collected from Yahoo finance and contain the daily stock prices of the companies since the beginning of 2000. The time series of the log-returns of the prices were divided into moving windows with the length of 252 days (number of working days in a year) and the step size of 63 days. Each window is marked with the date of the middle of the window.
+
+# Geometrical Brownian Motion
+
+Geometrical Brownian Motion or in short GBM model is considered as a standard model for stock price dynamics [[3]](#1). 
+The model assumes that the logarithm of random variables ${X}$ follows a Brownian motion and can be expressed by the following stochastic differential equation [[4,5]](#1),
+
+$$ dX(t)=\mu X(t)dt+\sigma X(t)dW(t). $$
+
+When modelling stock prices by GBM, $X(t)$ in above equation is considered as price at time $t$, $\mu$ is the drift term or the mean of the price and $\sigma$ is the volatility of the market. $dW$ is the increment of Wiener process which is white Gaussian noise. Using Ito's lemma, the price at time $t$ by solving above equation is
+
+$$ X(t)=X_{0} e^{(\mu-\frac{\sigma^{2}}{2})t+\sigma W(t)},$$
+
+$X_{0}$ is the price at time $t=0$. 
+
+
+
 
 ## References
 <a id="1">[1]</a> 
@@ -21,11 +37,25 @@ Granger, Clive WJ. (1969).
 Investigating causal relations by econometric models and cross-spectral methods. 
 Econometrica: journal of the Econometric Society, 37, 424-438.
 
-
 <b id="2">[2]</b> 
 Granger, Clive WJ. (1980). 
 Testing for causality: A personal viewpoint. 
 Journal of Economic Dynamics and control, 2, 329-352.
+
+<c id="3">[3]</c> 
+Mantegna, Rosario N and Stanley, H Eugene. (1999). 
+Introduction to econophysics: correlations and complexity in finance. 
+Cambridge university press.
+
+<d id="4">[4]</d> 
+Fouque, Jean-Pierre and Papanicolaou, George and Sircar, K Ronnie. (2000). 
+Derivatives in financial markets with stochastic volatility. 
+Cambridge university press.
+
+<e id="5">[5]</e> 
+McCauley, Joseph L. (2013). 
+Stochastic calculus and differential equations for physics and finance. 
+Cambridge university press.
 
 
 
