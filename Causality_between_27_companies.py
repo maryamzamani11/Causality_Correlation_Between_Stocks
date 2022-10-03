@@ -1,4 +1,41 @@
+from pandas_datareader import data, wb
+import pandas as pd
+import numpy as np
+import datetime
+import matplotlib.pyplot as plt
+import seaborn as sns
+sns.set_style('whitegrid')
+%matplotlib inline
+from statsmodels.tsa.stattools import grangercausalitytests, adfuller
 
+
+start = datetime.datetime(2000, 1, 1)
+end = datetime.datetime(2022, 1, 24)
+
+# Import 27 of big US companies
+
+tickers = ['AAPL', 'AMGN', 'AXP', 'BA', 'CAT', 'CSCO', 'CVX','DIS','GS','HD','HON','IBM','INTC','JNJ','JPM','KO','MCD'
+          ,'MRK','MMM','MSFT','NKE','PG','TRV','UNH','VZ','WBA','WMT']
+
+Companies = [AAPL, AMGN, AXP, BA, CAT, CSCO, CVX, DIS, GS, HD, HON, IBM, INTC, JNJ, JPM, KO, MCD
+          , MRK, MMM, MSFT, NKE, PG, TRV, UNH, VZ, WBA, WMT]
+
+Companies = []
+for company in tickers:
+    Companies.append(data.DataReader("AAPL", 'yahoo', start, end))
+
+# Concatanate all the stocks into a single dataframe
+
+Stocks = pd.concat(Companies,axis=1,keys=tickers)
+Stocks.columns.names = ['Company Ticker','Stock Info']
+
+# Make a dataframe with the log_return of the close prices
+
+LogReturn_df = pd.DataFrame()
+
+for ticker in tickers:
+    LogReturn_df[ticker] = np.log(Stocks[ticker]['Close']).diff()
+LogReturn_df.dropna(inplace=True) 
 
 
 
