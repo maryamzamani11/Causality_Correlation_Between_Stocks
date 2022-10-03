@@ -1,0 +1,2 @@
+# Causality_Correlation_USCompanies
+I found the Granger causality and correlation matrices between 27 big US companies and looked for its dynamics in the last 20 years. I found that the pair-wise Granger causality interaction between prices in the times of crisis is increasing, and tried to model that by by adding a multiplicative exogenous term as the representative for external factors to the geometric Brownian motion.
