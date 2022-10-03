@@ -5,9 +5,6 @@ import datetime
 import matplotlib.pyplot as plt
 import seaborn as sns
 sns.set_style('whitegrid')
-from statsmodels.tsa.api import VAR
-from statsmodels.tools.eval_measures import rmse, aic
-import statsmodels.api as sm
 from statsmodels.tsa.stattools import grangercausalitytests, adfuller
 
 
