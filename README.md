@@ -30,7 +30,7 @@ $X_{0}$ is the price at time $t=0$.
 
 # Modelling the stock prices by adding an extra term to the GBM
 
-In order to model the observed pattern in the dynamics of causality interaction between the stock prices, I added an extra exogenous term to the log-return of prices.  
+In order to model the observed patterns in the dynamics of causality interaction between the stock prices, I added an extra exogenous term to the log-return of prices.  
 For that, consider an additional term in above equation called $H(t)$ which represents any external driver that can affect the market price in different degrees. I rewrite the above equation by adding an extra term related to the external driver,
 
 $$ dX(t)=\mu X(t)dt+\beta h(t) X(t) dt +\sigma X(t)dW(t), $$
