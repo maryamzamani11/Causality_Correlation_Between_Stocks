@@ -6,7 +6,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 sns.set_style('whitegrid')
 %matplotlib inline
-from statsmodels.tsa.stattools import grangercausalitytests, adfuller
 
 
 start = datetime.datetime(2000, 1, 1)
