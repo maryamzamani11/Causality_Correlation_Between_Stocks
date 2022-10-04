@@ -16,8 +16,6 @@ end = datetime.datetime(2022, 1, 24)
 tickers = ['AAPL', 'AMGN', 'AXP', 'BA', 'CAT', 'CSCO', 'CVX','DIS','GS','HD','HON','IBM','INTC','JNJ','JPM','KO','MCD'
           ,'MRK','MMM','MSFT','NKE','PG','TRV','UNH','VZ','WBA','WMT']
 
-Companies = [AAPL, AMGN, AXP, BA, CAT, CSCO, CVX, DIS, GS, HD, HON, IBM, INTC, JNJ, JPM, KO, MCD
-          , MRK, MMM, MSFT, NKE, PG, TRV, UNH, VZ, WBA, WMT]
 
 Companies = []
 for company in tickers:
@@ -56,7 +54,7 @@ df_ave_Corr = pd.DataFrame(date_MeanCorr, columns=['date','Corr'])
 df_ave_Corr=df_ave_Corr.set_index('date')
 
 df_ave_Corr.plot(figsize=(14,6))
-plt.show(
+plt.show()
 
 
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
